@@ -8,19 +8,14 @@ let result = 0;
 
 let operation = "";
 
+
+// Añadir funcionalidad de edicion de display.
 function appendToDisplay(input) {
     if (display.value == "0") {
         display.value = input;
     } else {
         display.value += input;
     }
-}
-
-function setOperator(input) {
-    x = display.value;
-
-    operation = input;
-    display.value = 0;
 }
 
 function displayBackspace() {
@@ -32,6 +27,22 @@ function displayBackspace() {
     }
 }
 
+// Guardar primer digito (x) en memoria, dejar display libre para introducir segundo numero.
+// Permite seguir operando despues de hacer los cálculos con el resultado
+function setOperator(input) {
+    operation = input;
+
+    // Prevenir borrar el número guardado si se presiona el botón de operador más de una vez.
+    if (display.value == 0) {
+        return;
+    } else {
+        x = display.value;
+        display.value = 0;
+    }
+    
+}
+
+// Convertir porcentaje a decimal para facilidad de cálculo.
 function getPercentage() {
     display.value = Number(display.value / 100);
 }
@@ -54,6 +65,7 @@ function doTheMath() {
 }
 */
 
+// Convertir los números de String a NumberType, hacer cálculo basado en función predeterminada.
 function doTheMath() {
     try {
         y = display.value;
