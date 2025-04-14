@@ -1,0 +1,101 @@
+body {
+
+    margin: 0;
+    background-color: #bbb;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+
+}
+header {
+    background-color: #999;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    margin: 0;
+}
+
+/* Centrar contenido */
+main {
+    display: flex;
+    flex-flow: column, wrap;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+button {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    border: 0px;
+    background-color: hsl(0, 0%, 60%);
+    color: white;
+    font-size: 1.75rem;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.calculator {
+    max-width: 400px;
+    border-radius: 1rem;
+    background-color: #444;
+    overflow: auto;
+}
+
+/* Formato de pantalla de numeros */
+#display {
+    width: 320px;
+    padding: 20px;
+    margin-top: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 4rem;
+    text-align: right;
+    border: none;
+    justify-content: center;
+    background-color: #444;
+    color: white;
+}
+
+/* Aplicar estilos de teclado, columnas de 4 botones. */
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
+}
+
+.operator{
+    background-color: hsl(20, 67%, 60%);
+}
+
+#equalButton {
+    background-color: hsl(40, 60%, 70%);
+}
+
+/* Aplicar efectos durante interacciones. */
+button:hover {
+    background-color: hsl(0, 0%, 65%)
+}
+
+button:active {
+    background-color: hsl(0, 0%, 75%);
+}
+
+.operator:hover {
+    background-color: hsl(20, 67%, 65%);
+}
+
+.operator:active {
+    background-color: hsl(20, 67%, 75%);
+}
+
+#equalButton:hover {
+    background-color: hsl(40, 60%, 75%)
+}
+
+#equalButton:active {
+    background-color: hsl(40, 60%, 85%);
+}
